@@ -1,0 +1,92 @@
+syntax enable
+syntax on
+set number
+set hlsearch
+set cursorline
+set foldmethod=indent
+" set foldmethod=syntax
+filetype plugin indent on
+" let g:solarized_termcolors=256
+let g:solarized_bold=1
+" set background=light
+let g:javascript_plugin_jsdoc = 0
+let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_key_invoke_completion = '<Tab>'
+set encoding=utf8
+set guifont=Fira\ Code\ Medium\ 11
+let dart_html_in_string=v:true
+let dart_style_guide = 2
+let dart_format_on_save = 1
+let g:loaded_syntastic_dart_dartanalyzer_checker = 0
+
+let g:jsx_ext_required = 0 
+let g:gruvbox_italic = 1
+" let g:airline_theme='one'
+let g:solarized_term_italics=1
+
+" set background=dark
+" colorscheme vim-material
+colorscheme dracula 
+" colorscheme solarized8
+"  airlines plugin
+let g:gruvbox_contrast_light='soft'
+let g:airline_theme='violet'
+let g:airline#extensions#tabline#enabled=0
+
+" Flow settings
+let g:flow#enable = 1
+let g:flow#errjmp = 1
+let g:flow#omnifunc = 1
+let g:flow#showquickfix = 1
+
+:set fillchars+=vert:\
+set clipboard=unnamed
+hi VertSplit ctermbg=NONE
+hi VertSpilt ctermfg=NONE
+set relativenumber
+set timeoutlen=1000 ttimeoutlen=0
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+
+" Text wrapping
+" set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+hi Folded ctermfg=black
+hi Folded ctermbg=gray
+
+map <leader><C-n> :NERDTreeToggle<CR>
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" augroup fmt
+  " autocmd!
+  " autocmd BufWritePre * undojoin | Neoformat
+" augroup END
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre .js,.jsx,.mjs,.ts,.tsx,.css,.less,.scss,.json,.graphql,.md,.vue PrettierAsync
+
+" CtrlP options
+set wildignore+=/tmp/,/dist/,/build/,/node_modules/,/bower_components/,.so,.swp,*.zip  
+let g:ctrlp_show_hidden = 1
+" set pastetoggle=<F2>
+set ignorecase
+set tags=./tags,tags;$HOME
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" map <C-n> :NERDTreeToggle<CR>
+" imap hh <C-y>,i
+" let g:NERDTreeHijackNetrw=0
+set fillchars=vert:\│
