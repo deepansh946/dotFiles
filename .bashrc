@@ -119,6 +119,10 @@ fi
 
 
 clear
+tmux -u
+clear
 
 export NVM_DIR="/home/deepansh/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$PATH
