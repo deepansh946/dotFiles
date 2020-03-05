@@ -3,6 +3,12 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 source /home/deepansh/.bashrc
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 alias tmux="tmux -u"
 
 # Path to your oh-my-zsh installation.
@@ -103,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /home/deepansh/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 # tabtab source for packages
 # uninstall by removing these lines
