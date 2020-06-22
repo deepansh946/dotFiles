@@ -24,6 +24,8 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+set guifont=Fira\ Code\ 12
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -158,6 +160,12 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
+colorscheme dracula
 autocmd GUIEnter * call system("wmctrl -ir " . v:windowid . " -b add,fullscreen")
 
 :set guioptions-=T
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
