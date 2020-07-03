@@ -21,4 +21,4 @@ Plug 'prettier/vim-prettier'
 " Plug 'Chiel92/vim-autoformat'
 Plug 'dense-analysis/ale'
 Plug 'mattn/emmet-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula'  }

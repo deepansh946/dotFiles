@@ -1,0 +1,63 @@
+#ack is a tool like grep, designed for programmers with large trees of
+# heterogeneous source code
+
+#to install ack, see http://betterthangrep.com/
+#to use ack, launch terminal (mac osx) and type 'ack <some_keywords>'
+#ack will search all files in the current directory & sub-directories
+
+#here's how I have my config file setup. this file is located on mac osx here
+# ~/.ackrc 
+
+# Always sort the files
+#--sort−files
+
+# Always color, even if piping to a another program
+--color
+
+# Ignore case
+--ignore-case
+
+# Use "less −r" as my pager
+# --pager
+
+# Do not send output through a pager.
+--nopager
+
+# Print a break between results from different files.
+--break
+
+# Print a filename heading above each file's results.
+--heading
+
+# less -r
+
+--ignore-dir=.idea/
+--ignore-dir=node_modules/
+--ignore-dir=.sass-cache/
+--ignore-dir=.tmp/
+
+--ignore-dir=.gist-cache
+--ignore-dir=.pygments-cache
+--ignore-dir=.sass-cache
+--ignore-dir=.themes
+--ignore-dir=_deploy
+--ignore-dir=public
+--ignore-dir=bower_components/
+--ignore-dir=dist
+
+#make sure ack knows how to search common filetypes used in rails projects
+--type-add=css=scss
+--type-add=ruby=.haml,.rselm,.feature,.ru,.lock
+--type-set=coffeescript=.coffee
+--type-set=coffee=.coffee
+
+#make sure ack knows how to search common filetypes used in node.js projects
+--type-set=coffee=.coffee
+--type-set=jade=.jade
+--type-set=feature=.feature
+--type-set=json=.json
+
+--type-add=css=.sass,.scss
+--type-set=haml=.haml
+--type-add=css=less
+--type-set=markdown=.md,.mkd,.markdown
