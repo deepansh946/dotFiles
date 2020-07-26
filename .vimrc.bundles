@@ -29,7 +29,6 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'python-mode/python-mode'
 Plug 'flazz/vim-colorschemes'
-Plug 'Valloric/YouCompleteMe'
 " Plug 'dense-analysis/ale'
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
