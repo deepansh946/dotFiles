@@ -141,6 +141,8 @@ nnoremap <C-l> <C-w>l
 let @+=@"
 let @*=@"
 
+let g:NERDTreeWinPos = "right"
+
 " Move between linting errors
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
@@ -158,7 +160,7 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
-set guifont=Fira\ Code\ 12
+set guifont=Fira\ Code\ 16
 colorscheme dracula
 autocmd GUIEnter * call system("wmctrl -ir " . v:windowid . " -b add,fullscreen")
 
