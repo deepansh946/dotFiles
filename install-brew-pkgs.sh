@@ -7,6 +7,7 @@ brew tap mongodb/brew
 # Core packages (filtered important ones)
 
 packages=(
+  awscli
   git
   node
   pnpm
