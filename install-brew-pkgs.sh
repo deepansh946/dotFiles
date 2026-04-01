@@ -30,6 +30,7 @@ packages=(
   mongodb-database-tools
   mongosh
   redis
+  nosql-workbench
   mysql
   postgresql@16
   openjdk
