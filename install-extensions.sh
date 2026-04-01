@@ -1,0 +1,31 @@
+#!/bin/bash
+
+extensions=(
+  "anysphere.cursorpyright"
+  "bradlc.vscode-tailwindcss"
+  "charliermarsh.ruff"
+  "dbaeumer.vscode-eslint"
+  "dheovani.svg-viewer"
+  "dracula-theme.theme-dracula"
+  "eamodio.gitlens"
+  "esbenp.prettier-vscode"
+  "ganesanchandran.fetch-client"
+  "github.vscode-github-actions"
+  "juanblanco.solidity"
+  "mechatroner.rainbow-csv"
+  "ms-azuretools.vscode-containers"
+  "ms-azuretools.vscode-docker"
+  "ms-python.debugpy"
+  "ms-python.python"
+  "ms-vscode.live-server"
+  "streetsidesoftware.code-spell-checker"
+  "vscode-icons-team.vscode-icons"
+  "vscodevim.vim"
+  "wakatime.vscode-wakatime"
+  
+  )
+
+  for ext in "${extensions[@]}"; do
+    code --install-extension "$ext"
+    cursor --install-extension "$ext"
+  done
