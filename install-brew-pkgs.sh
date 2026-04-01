@@ -2,6 +2,8 @@
 
 echo "🚀 Installing Homebrew packages..."
 
+brew tap mongodb/brew
+
 # Core packages (filtered important ones)
 
 packages=(
@@ -29,7 +31,7 @@ packages=(
   mongosh
   redis
   mysql
-  postgresql@14
+  postgresql@16
   openjdk
   php
   curl
